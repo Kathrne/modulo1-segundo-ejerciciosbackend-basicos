@@ -1,27 +1,25 @@
 /* Toma dos arreglos de objetos que representen listas de estudiantes y profesores, y crea una nueva lista combinada con todos los miembros de la comunidad educativa */
 
 // Arreglo de objetos que representan estudiantes
-const estudiantes = [
-    { nombre: "Juan", edad: 20 },
-    { nombre: "María", edad: 22 },
-    { nombre: "Carlos", edad: 21 }
-];
+let estudiante = [
+    {nombre:"Alberto", edad:26},
+    {nombre: "Sarai", edad:24},
+    {nombre: "Francisco", edad:26}
+]
 
-// Arreglo de objetos que representan profesores
-const profesores = [
-    { nombre: "Ana", edad: 35, materia: "Matemáticas" },
-    { nombre: "Pedro", edad: 40, materia: "Historia" }
-];
+let profesores = [
+    {nombre:"Genaro", Materia: "Matematicas"},
+    {nombre:"Marta", Materia: "Lenguaje"},
+    {nombre: "Salvador", Materia:"Ciencias"}
+]
 
-// Función para combinar los arreglos de estudiantes y profesores
-function combinarComunidadEducativa(estudiantes, profesores) {
-    // Concatenar los dos arreglos
-    return estudiantes.concat(profesores);
+
+function combinarObjetos (a, b){
+
+    let comunidadEducativa = [...a, ...b]
+    return comunidadEducativa
 }
 
-// Crear la nueva lista combinada
-const comunidadEducativa = combinarComunidadEducativa(estudiantes, profesores);
+let comunidad = combinarObjetos(estudiante, profesores)
 
-// Mostrar la nueva lista combinada
-console.log("Lista combinada de estudiantes y profesores:");
-console.log(comunidadEducativa);
+console.log(comunidad);
