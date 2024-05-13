@@ -1,27 +1,25 @@
 /* Dado un objeto que representa una lista de compras con elementos y cantidades, genera una lista legible para el usuario mostrando cada elemento y su cantidad. */
 
 // Función para generar una lista legible de compras
-function generarListaDeCompras(listaDeCompras) {
-    let listaLegible = "Lista de Compras:\n";
-    
-    // Iterar sobre cada elemento en la lista de compras
-    for (let elemento in listaDeCompras) {
-        listaLegible += `${elemento}: ${listaDeCompras[elemento]}\n`;
-    }
-
-    return listaLegible;
+let listaCompras = {
+    "Manzana": 5,
+    "Platanos": 4,
+    "Uvas": 3,
+    "Peras":3
 }
 
-// Objeto que representa una lista de compras con elementos y cantidades
-const listaDeCompras = {
-    "Manzanas": 5,
-    "Plátanos": 3,
-    "Leche": 2,
-    "Pan": 1
-};
 
-// Generar la lista legible de compras
-const listaLegible = generarListaDeCompras(listaDeCompras);
+function generarListaCompras(listaCompras){
 
-// Mostrar la lista legible de compras
+    let listaLegible="Lista de compras: \n"
+    
+    for (let elemento in listaCompras){
+        listaLegible += `${elemento} : ${listaCompras[elemento]} unidades\n`
+    }
+    return listaLegible
+
+
+}
+
+let listaLegible = generarListaCompras(listaCompras)
 console.log(listaLegible);
