@@ -1,31 +1,22 @@
 /* Crea una función que reciba un arreglo de cadenas de texto y cuente cuántas veces aparece cada palabra en todas las cadenas. */
 
-function contarPalabras(arr) {
-    // Creamos un objeto para almacenar las palabras y sus conteos
-    let conteoPalabras = {};
+function contarPalabrasIgual(array) {
+    let contadorPalabras = {};
 
-    // Iteramos sobre cada cadena de texto en el arreglo
-    arr.forEach(cadena => {
-        // Dividimos la cadena en palabras
-        const palabras = cadena.split(/\s+/);
-
-        // Iteramos sobre cada palabra
+    array.forEach(cadena => {
+        let palabras = cadena.split(/\s+/);
         palabras.forEach(palabra => {
-            // Si la palabra ya está en el objeto, incrementamos su conteo
-            if (conteoPalabras[palabra]) {
-                conteoPalabras[palabra]++;
+            if (contadorPalabras[palabra]) {
+                contadorPalabras[palabra]++;
             } else {
-                // Si la palabra no está en el objeto, la inicializamos con un conteo de 1
-                conteoPalabras[palabra] = 1;
+                contadorPalabras[palabra] = 1;
             }
         });
     });
 
-    // Devolvemos el objeto con el conteo de palabras
-    return conteoPalabras;
+    return contadorPalabras;
 }
 
-// Ejemplo de uso
-const cadenas = ["hola mundo hola", "mundo mundo adios"];
-const conteo = contarPalabras(cadenas);
-console.log(conteo);
+let frase = ["hola mundo de nuevo"];
+let resultado = contarPalabrasIgual(frase);
+console.log(resultado);
